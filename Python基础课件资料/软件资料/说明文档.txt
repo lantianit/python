@@ -1,0 +1,7 @@
+
+1. 解释器在python3.6版本以上都可以
+2. typora md编辑工具，md文档编辑工具
+3.xmind 思维导图我们总计使用的 
+4. pycharm同学自行百度下载。 这是对应的激活链接方式https://www.lookdiv.com/
+
+这些工具同学也可以自行百度下载

@@ -32,12 +32,12 @@ el = driver.find_element(By.XPATH,value='/html/body/div/div[1]/div[3]/div[2]/div
 ActionChains(driver).move_to_element(el).click().perform()
 input_element = driver.find_element(By.XPATH,value='//*[@id="app"]/div[1]/div[3]/div[2]/div[3]/div[2]/div/section/div/input')
 input_element.clear()
-input_element.send_keys("2024-05-17")
+input_element.send_keys("2024-06-01")
 input_element.send_keys(Keys.ENTER)
 driver.implicitly_wait(1000)
 while True:
     strtime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    if (strtime == "2024-05-15 22:30:00"):
+    if (strtime == "2024-06-18 22:30:00"):
         el = driver.find_element(By.XPATH,
                                  value='/html/body/div[1]/div[1]/div[3]/div[2]/div[3]/div[2]/div/div[3]/div[1]/div/div[3]/span/button[1]')  # 找到元素
         ActionChains(driver).move_to_element(el).click().perform()

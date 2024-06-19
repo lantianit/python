@@ -9,8 +9,14 @@ from selenium.webdriver.common.by import By
 
 def auto_reserve() :
     while True :
-        if (datetime.now().strftime('%Y-%m-%d %H:%M:%S') == "2024-05-16 22:29:30"):
+        if (datetime.now().strftime('%Y-%m-%d %H:%M:%S') == "2024-05-30 22:29:58"):
             while True :
+                q = requests.post("http://icspace.lib.zjhu.edu.cn/ic-web/reserve", data=json.dumps(payload),
+                                         headers=request_header)
+                print(q.json())
+                q = requests.post("http://icspace.lib.zjhu.edu.cn/ic-web/reserve", data=json.dumps(payload),
+                                         headers=request_header)
+                print(q.json())
                 q = requests.post("http://icspace.lib.zjhu.edu.cn/ic-web/reserve", data=json.dumps(payload),
                                          headers=request_header)
                 print(q.json())
@@ -70,9 +76,9 @@ request_header = {
 request_header["Cookie"] = cookie
 request_header["token"] = token
 payload = {"sysKind": 8, "appAccNo": 74206, "memberKind": 1, "resvMember": [74206],
-           "resvBeginTime": "2024-05-18 8:00:00",
-           "resvEndTime": "2024-05-18 22:00:00",
-           "testName": "", "captcha": "", "resvProperty": 0, "resvDev": [100458082], "memo": ""
+           "resvBeginTime": "2024-06-01 8:00:00",
+           "resvEndTime": "2024-06-01 22:00:00",
+           "testName": "", "captcha": "", "resvProperty": 0, "resvDev": [100458083], "memo": ""
            }
 t1 = threading.Thread(target=auto_reserve,name = "MyThread1")
 t1.start()
