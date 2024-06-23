@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 def auto_reserve() :
     while True :
-        if (datetime.now().strftime('%Y-%m-%d %H:%M:%S') == "2024-05-30 22:29:58"):
+        if (datetime.now().strftime('%Y-%m-%d %H:%M:%S') == "2024-06-23 22:30:00"):
             while True :
                 q = requests.post("http://icspace.lib.zjhu.edu.cn/ic-web/reserve", data=json.dumps(payload),
                                          headers=request_header)
@@ -20,6 +20,7 @@ def auto_reserve() :
                 q = requests.post("http://icspace.lib.zjhu.edu.cn/ic-web/reserve", data=json.dumps(payload),
                                          headers=request_header)
                 print(q.json())
+                break;
 
 option = Options()
 option.add_experimental_option("detach", True)
@@ -36,9 +37,9 @@ driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
   """
 })
 name = driver.find_element(by=By.ID, value='username')
-name.send_keys('2021082320')  # 输入学号
+name.send_keys('2021021332')  # 输入学号
 password = driver.find_element(by=By.ID, value='ppassword')
-password.send_keys('@z12345678')  # 输入密码
+password.send_keys('@zhu753159')  # 输入密码
 login = driver.find_element(by=By.ID, value='dl')
 login.click()  # 点击登录按钮
 sleep(1)
@@ -75,10 +76,10 @@ request_header = {
 }
 request_header["Cookie"] = cookie
 request_header["token"] = token
-payload = {"sysKind": 8, "appAccNo": 74206, "memberKind": 1, "resvMember": [74206],
-           "resvBeginTime": "2024-06-01 8:00:00",
-           "resvEndTime": "2024-06-01 22:00:00",
-           "testName": "", "captcha": "", "resvProperty": 0, "resvDev": [100458083], "memo": ""
+payload = {"sysKind": 8, "appAccNo": 72706, "memberKind": 1, "resvMember": [72706],
+           "resvBeginTime": "2024-06-25 8:00:00",
+           "resvEndTime": "2024-06-25 22:00:00",
+           "testName": "", "captcha": "", "resvProperty": 0, "resvDev": [100461420], "memo": ""
            }
 t1 = threading.Thread(target=auto_reserve,name = "MyThread1")
 t1.start()

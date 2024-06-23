@@ -22,9 +22,9 @@ driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
   """
     })
 name = driver.find_element(by=By.ID, value='username')
-name.send_keys('2021082320')    #输入学号
+name.send_keys('2021021332')    #输入学号
 password = driver.find_element(by=By.ID, value='ppassword')
-password.send_keys('@z12345678')    #输入密码
+password.send_keys('@zhu753159')    #输入密码
 login = driver.find_element(by=By.ID, value='dl')
 login.click()   #点击登录按钮
 driver.implicitly_wait(1000)
@@ -37,7 +37,7 @@ input_element.send_keys(Keys.ENTER)
 driver.implicitly_wait(1000)
 while True:
     strtime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    if (strtime == "2024-06-18 22:30:00"):
+    if (strtime == "2024-06-23 22:30:02"):
         el = driver.find_element(By.XPATH,
                                  value='/html/body/div[1]/div[1]/div[3]/div[2]/div[3]/div[2]/div/div[3]/div[1]/div/div[3]/span/button[1]')  # 找到元素
         ActionChains(driver).move_to_element(el).click().perform()
