@@ -37,7 +37,7 @@ input_element.send_keys(Keys.ENTER)
 driver.implicitly_wait(1000)
 while True:
     strtime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    if (strtime == "2024-06-23 22:30:03"):
+    if (strtime == "2024-06-26 22:30:03"):
         el = driver.find_element(By.XPATH,
                                  value='/html/body/div[1]/div[1]/div[3]/div[2]/div[3]/div[2]/div/div[3]/div[1]/div/div[3]/span/button[1]')  # 找到元素
         ActionChains(driver).move_to_element(el).click().perform()
